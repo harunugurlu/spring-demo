@@ -5,7 +5,7 @@ import java.util.Map;
 
 // Simulates db
 public class Store {
-    
+
     private static final Map<String, User> STORAGE = new HashMap<>();
 
     public void store(User user) {

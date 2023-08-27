@@ -2,6 +2,7 @@ package org.spring.demo.controller;
 
 import org.spring.demo.model.Store;
 import org.spring.demo.model.User;
+import org.spring.demo.service.UserPersistence;
 import org.spring.demo.service.UserValidator;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -11,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class UserController {
-    private Store store = new Store();
-    UserValidator userValidator = new UserValidator();
+
+    UserPersistence persistenceService = new UserPersistence();
 
     /*@RequestMapping(value = "/create-user", method = RequestMethod.GET)
     public String user() {
@@ -21,12 +22,14 @@ public class UserController {
     @RequestMapping(value = "/create-user", method = RequestMethod.GET)
     public String createUser(ModelMap modelMap, @RequestParam String name, @RequestParam String email, @RequestParam String address) {
 
+        UserValidator userValidator = new UserValidator();
+
         User existingUser = userValidator.isValidUser(name);
 
         if(existingUser == null) {
             User newUser = new User(name, email, address);
 
-            store.store(newUser);
+            persistenceService.saveUser(newUser);
 
             String message = "SUCCESSFULLY CREATED USER: " + name;
             modelMap.addAttribute("message", message);
