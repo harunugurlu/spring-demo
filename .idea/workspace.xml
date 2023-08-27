@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ceb3a4b-682e-4fdf-927e-53210e3141ac" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/spring/demo/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/spring/demo/model/Store.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/spring/demo/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/spring/demo/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/spring/demo/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/spring/demo/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/spring/demo/controller/HelloController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,12 +56,18 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/harun/IdeaProjects/SpringDemo/src/main/java/org/spring/demo/Controllers",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "project.propDebugger"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\harun\IdeaProjects\SpringDemo\src\main\java\org\spring\demo\Controllers" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="SpringMVCDemo" type="com.poratu.idea.plugins.tomcat">
       <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
@@ -68,9 +77,6 @@
       <predefined_log_file id="Tomcat Host Manager Log" />
       <option name="contextPath" value="/SpringDemo" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
-      <option name="envOptions">
-        <map />
-      </option>
       <option name="extraClassPath" value="" />
       <option name="tomcatInfo">
         <TomcatInfo>
