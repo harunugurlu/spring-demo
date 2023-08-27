@@ -2,6 +2,7 @@ package org.spring.demo.controller;
 
 import org.spring.demo.model.Store;
 import org.spring.demo.model.User;
+import org.spring.demo.service.UserValidator;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class UserController {
     private Store store = new Store();
+    UserValidator userValidator = new UserValidator();
 
     /*@RequestMapping(value = "/create-user", method = RequestMethod.GET)
     public String user() {
@@ -19,7 +21,7 @@ public class UserController {
     @RequestMapping(value = "/create-user", method = RequestMethod.GET)
     public String createUser(ModelMap modelMap, @RequestParam String name, @RequestParam String email, @RequestParam String address) {
 
-        User existingUser = isValidUser(name);
+        User existingUser = userValidator.isValidUser(name);
 
         if(existingUser == null) {
             User newUser = new User(name, email, address);
@@ -43,10 +45,5 @@ public class UserController {
         }
 
         return "create_user";
-    }
-
-    private User isValidUser(String name) {
-        User existingUser = store.getUser(name);
-        return existingUser;
     }
 }
